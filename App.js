@@ -1,8 +1,10 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 const heading = React.createElement("h1",{id:"heading"},"Hellow World by REACT!");
 console.log(heading);
 
 //div parent and child
-
+//parser is a bundler 
 const parent =React.createElement("div",{id:"parent"},[
     React.createElement("div", {id:"child"},
         [React.createElement("h1",{},"This is H1"),

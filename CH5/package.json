@@ -1,0 +1,21 @@
+{
+  "name": "ch4",
+  "version": "1.0.0",
+  "description": "Building First React APp",
+  "main": "App.js",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Nimish Sahu",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

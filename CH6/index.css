@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+/* Header Styles */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    border-bottom: solid 2px #444;
+}
+
+.logo {
+    width: 150px;
+    mix-blend-mode:color;
+}
+
+.nav-items ul {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-items li {
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 18px;
+    list-style-type: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-items li:hover {
+    color: rgb(160, 47, 6);
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Body Styles */
+.body {
+    padding: 20px;
+}
+
+
+/* Restaurant Container Styles */
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.res-cards {
+    padding: 15px;
+    width: 250px;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.res-cards:hover {
+    cursor: pointer;
+    border: solid 2px #333;
+    background-color: #f9f9f9;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.res-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.res-cards h3 {
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.res-cards h4 {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Search Container Styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Search Input Styles */
+.search-input {
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+}
+
+/* Search Button Styles */
+.search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #444;
+}
+
+.search-btn:active {
+    transform: translateY(2px);
+}

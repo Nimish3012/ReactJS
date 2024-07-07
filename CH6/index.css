@@ -51,6 +51,7 @@ body {
 
 /* Restaurant Container Styles */
 .res-container {
+    padding: 20 80;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;

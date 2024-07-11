@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 const Title = () => (
     <a href="/">
         <img
@@ -15,20 +16,10 @@ const Header = () => {
         <Title/>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/nimish-sahu-a611a1224/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'inherit', textDecoration: 'none' }}
-              >
-                Contact
-              </a>
-
-            </li>
-            <li>About</li>
-            <li>Cart</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/">Cart</Link></li>
           </ul>
         </div>
       </div>

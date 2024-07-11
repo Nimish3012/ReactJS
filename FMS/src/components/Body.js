@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { resList } from "./Constants";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 function filterRestaurants(searchText, restaurants) {
   if (searchText === "") {
     return restaurants;
@@ -28,6 +29,7 @@ function filterRestaurants(searchText, restaurants) {
 const Body = () => {
   const [restaurants, setRestaurants] = useState(resList);
   const [filteredRes, setFilteredRes] = useState(resList);
+  const [login, setLogin] = useState(true);
 
   const [searchText, setSearchText] = useState("");
 
@@ -54,31 +56,37 @@ const Body = () => {
 
   
   return (
-    <div className="body">
-      <div className="search-container">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Search"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-        <button
-          className="search-btn"
-          onClick={() => {
-            const data = filterRestaurants(searchText, restaurants);
-            setFilteredRes(data);
-          }}
-        >
-          Search
-        </button>
+    login ? (
+        <>
+        <div className="body">
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              const data = filterRestaurants(searchText, restaurants);
+              setFilteredRes(data);
+            }}
+          >
+            Search
+          </button>
+        </div>
+        <div className="res-container">
+          {filteredRes.map((res) => (
+            <RestaurantCard key={res.info.id} resData={res} />
+          ))}
+        </div>
       </div>
-      <div className="res-container">
-        {filteredRes.map((res) => (
-          <RestaurantCard key={res.info.id} resData={res} />
-        ))}
-      </div>
-    </div>
+      </>
+      ) : (
+        <Shimmer/>
+      )
   );
 };
 
